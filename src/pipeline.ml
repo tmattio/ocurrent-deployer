@@ -163,7 +163,7 @@ let include_git = { Cluster_api.Docker.Spec.defaults with include_git = true }
    the service, and where to deloy it. *)
 let v ?app ?notify:channel ?filter ~sched ~staging_auth () =
   let ocurrent = Build.org ?app ~account:"ocurrent" 12497518 in
-  let ocaml = Build.org ?app ~account:"ocaml" 12075891 in (* XXX *)
+  let ocaml = Build.org ?app ~account:"ocaml" 18513252 in
   let build (org, name, builds) = Cluster_build.repo ?channel ~web_ui ~org ~name builds in
   let sched = Current_ocluster.v ~timeout ?push_auth:staging_auth sched in
   let docker = docker ~sched in
